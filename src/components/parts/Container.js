@@ -15,7 +15,7 @@ const Container = (props) => {
     let array = [];
     categories.forEach(category => {
       array.push({
-        name: '',
+        name: category.name,
         value: 0,
       })
     })
@@ -29,10 +29,7 @@ const Container = (props) => {
       for (let j=0; j < categories.length; j++) {
         if (categories[j].id === data[i].category) {
           sum = array[j].value + data[i].money;
-          array.splice(j, 0, {
-            name: categories[j].name,
-            value: sum
-          }) ;
+          array[j].value = sum;
           sum=0;
         }
       }
@@ -88,9 +85,6 @@ const Container = (props) => {
   const totalIncome = total(income);
   const totalExpense = total(expense);
   const spendings = totalIncome - totalExpense;
-  const colorTotal = ['#0000ff', '#FF3300'];
-  const colorExpense = ['#66CC00', '#FFFF66', '#770000', '#55FFFF', '#FF3333', '#005FFF', '#CCCCCC'];
-  const colorIncome = ['#FFFF66', '#D0FF43', '#FFBEDA', '#77F9C3', '#CCCCCC'];
   const namesTotal = ['収入', '支出'];
   const [categoriesExpense, setCategoriesExpense] = useState([]);
   const [categoriesIncome, setCategoriesIncome] = useState([]);
@@ -105,14 +99,14 @@ const Container = (props) => {
         {totalIncome === 0 && totalExpense === 0 ?
           <p>登録されているデータがありません。</p>
         :
-          <PieCharts colors={colorTotal} data={dataTotal} />
+          <PieCharts data={dataTotal} total={'total'} />
         }
       </div>
       <div className='total'>
         <div className='data'>
           <h2>収入 ¥{totalIncome}</h2>
           {totalIncome !== 0 ? 
-            <PieCharts colors={colorIncome} data={dataIncome} />
+            <PieCharts data={dataIncome} />
           :
             <p>登録されているデータがありません。</p>
           }
@@ -120,7 +114,7 @@ const Container = (props) => {
         <div className='data'>
           <h2>支出 ¥{totalExpense}</h2>
           {totalExpense !== 0 ?
-            <PieCharts colors={colorExpense} data={dataExpense} />
+            <PieCharts data={dataExpense} />
           :
             <p>登録されているデータがありません。</p>
           }
