@@ -1,0 +1,5 @@
+export const DELETE_EXPENSE = "DELETE_EXPENSE";
+export const DELETE_INCOME = "DELETE_INCOME";
+
+export const FETCH_EXPENSE = 'FETCH_EXPENSE';
+export const FETCH_INCOME = 'FETCH_INCOME';

@@ -1,0 +1,148 @@
+html {
+  font-size: 16px;
+  font-family:  '游ゴシック', YuGothic, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding-top: 4rem;
+}
+
+.container h1 {
+  margin: 0.5rem auto 0;
+  font-size: 1.7em;
+}
+
+.container h2 {
+  margin: 0.5rem auto 0;
+  font-size: 1.5em;
+}
+
+.container > h2 {
+  text-align: center;
+}
+
+.total {
+  display: flex;
+}
+
+.data {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page {
+  display: flex;
+}
+
+.page h1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.container span {
+  padding-left: 5px;
+}
+
+.minus {
+  color: red;
+}
+
+.plus {
+  color: blue;
+}
+
+.spendings {
+  margin: 1rem;
+}
+
+.flex-left, .flex-right {
+  display: inline-block;
+  padding: 0 20px;
+  width: calc(50% - 40px);
+  vertical-align: top;
+}
+
+.form {
+  margin: 45px auto 0 auto;
+  max-width: 300px;
+  padding: 1rem;
+  height: auto;
+  width: calc(100% - 2rem);
+  text-align: center;
+}
+
+.form h2 {
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+.another-account > h2 {
+  font-size: 23px;
+  font-weight: normal;
+}
+
+.sign-section p {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.sign-section p:first-child {
+  margin-top: 30px;
+}
+
+.sign-section p:hover {
+  color: #6eb2fa;
+}
+
+.zero {
+  margin: 0;
+}
+
+.none {
+  padding: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+.reset {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .flex-left {
+    display: block;
+    margin: 0 1rem;
+    padding: 0;
+    width: calc(100% - 2rem);
+  }
+
+  .flex-right {
+    display: block;
+    margin: 0 1rem;
+    padding: 0;
+    width: calc(100% - 2rem);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .total {
+    display: block;
+    margin: 0.5rem auto 0;
+  }
+
+  .total h2 {
+    margin-bottom: 0.5rem;
+  }
+}
