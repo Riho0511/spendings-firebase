@@ -24,11 +24,15 @@
 
 ### ログイン画面
 
+<img src="images/signin.png" width="500px">
+
 アカウントを持っている場合はログイン、持っていない場合は新規登録をする。
 
 パスワードを忘れてしまった場合はパスワードリセットをする。
 
 ### トップ画面
+
+<img src="images/top.png" width="500px">
 
 月の収支状況が表示される。
 
@@ -38,11 +42,14 @@
 
 ### マイページ
 
+<img src="images/mypage.png" width="500px">
+
 現在使用しているユーザーの登録情報が表示される。
 
 パスワードでログインしているユーザーは登録情報を変更できる。
 
 ### 収支登録
+<img src="images/income.png" width="320px" height='200px'><img src="images/expense.png" width="320px" height='200px'>
 
 メモ以外は必須項目のため入力し、「登録」ボタンを押すと登録が完了する。
 
